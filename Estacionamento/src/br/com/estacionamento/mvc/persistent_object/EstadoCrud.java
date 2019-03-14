@@ -8,6 +8,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+//CRUD exercicio
+
 public class EstadoCrud {
 	
 	EntityManagerFactory emf = Persistence.createEntityManagerFactory("ESTACIONAMENTO_PU");
@@ -67,6 +69,7 @@ public class EstadoCrud {
 	public List <POEstado> Listar(POEstado estado) {
 		
 		try {
+			
 			
 			Query query = em.createQuery("SELECT e FROM POEstado e");
 			query.setFirstResult(0);

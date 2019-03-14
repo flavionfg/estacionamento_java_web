@@ -6,10 +6,12 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
+//Exemplo CRUD do professor!!
+
 public abstract class AbstractCRUD {
 	
-	EntityManagerFactory emf = null;
-	EntityManager em = null;
+	protected EntityManagerFactory emf = null;
+	protected EntityManager em = null;
 	
 	
 	public void open() {
