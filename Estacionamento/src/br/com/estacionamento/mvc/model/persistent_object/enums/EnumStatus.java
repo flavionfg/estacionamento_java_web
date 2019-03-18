@@ -1,4 +1,4 @@
-package br.com.estacionamento.mvc.persistent_object.enums;
+package br.com.estacionamento.mvc.model.persistent_object.enums;
 
 //crtl 1 no erro
 

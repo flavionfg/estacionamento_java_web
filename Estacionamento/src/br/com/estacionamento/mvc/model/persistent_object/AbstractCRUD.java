@@ -1,4 +1,4 @@
-package br.com.estacionamento.mvc.persistent_object;
+package br.com.estacionamento.mvc.model.persistent_object;
 
 import java.util.ArrayList;
 

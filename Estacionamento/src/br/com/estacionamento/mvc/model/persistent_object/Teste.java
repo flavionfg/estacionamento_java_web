@@ -1,4 +1,4 @@
-package br.com.estacionamento.mvc.persistent_object;
+package br.com.estacionamento.mvc.model.persistent_object;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-import br.com.estacionamento.mvc.persistent_object.enums.EnumStatus;
+import br.com.estacionamento.mvc.model.persistent_object.enums.EnumCor;
+import br.com.estacionamento.mvc.model.persistent_object.enums.EnumStatus;
 
 //SET @@glocal_time_zone = "+3:00" - rodar no banco em caso de erro de timezone
 //ATALHOS:
@@ -58,15 +59,15 @@ public class Teste {
 		//find
 		
 		POEstado es = new POEstado();
-		es.setNomeEstado("Santa Catarina");
-		es.setSiglaEstado("SC");
-		es.setIdEstado(6);
-		
-		EstadoCrud ec = new EstadoCrud();
+//		es.setNomeEstado("Santa Catarina");
+//		es.setSiglaEstado("SC");
+//		es.setIdEstado(6);
+//		
+//		EstadoCrud ec = new EstadoCrud();
 //		ec.salvar(es);
 //		ec.remover(es);
 //		ec.editar(es);
-		ec.Listar(es);
+//		ec.Listar(es);
 	
 //		EntityManagerFactory emf = Persistence.createEntityManagerFactory("ESTACIONAMENTO_PU");
 //		EntityManager em = emf.createEntityManager();
@@ -83,6 +84,45 @@ public class Teste {
 //			System.out.println(e.getNomeEstado());
 //		}
 		
+		
+		
+//		CRUDEstado crudEstado = new CRUDEstado();
+//		CRUDCidade crudCidade = new CRUDCidade();
+//		
+//		ArrayList<Object> estadoResult = crudEstado
+//				.select("SELECT o FROM POEstado o WHERE "
+//						+ "o.idEstado = 1");
+//		
+//		POEstado estado = (POEstado) estadoResult.get(0);
+//		
+//		POCidade cidade = new POCidade();
+//		cidade.setNomeCidade("Rolândia");
+//		cidade.setEstadoCidade(estado);
+//		cidade.setStatusCidade(EnumStatus.ATIVO);
+//		
+//		crudCidade.insert(cidade);
+//		System.out.println(cidade.getIdCidade());
+		
+//		POMarca marca = new POMarca();
+//		marca.setDescricao("Honda");
+//		marca.setStatus_marca(EnumStatus.ATIVO);
+//		
+//		POModelo m = new POModelo();
+//		m.setDescrica("CIVIC");
+//		m.setStatus_modelo(EnumStatus.ATIVO);
+//		m.setMarcaModelo(marca);
+//	
+//		POVeiculo v = new POVeiculo();
+//		v.setCorVeiculo(EnumCor.PRETO);
+//		v.setPlacaVeiculo("vdl-2123");
+//		v.setModeloVeiculo(m);
+//		v.setStatusVeiculo(EnumStatus.ATIVO);
+//		
+//		CRUDVeiculo crudVeiculo = new CRUDVeiculo();
+		
+		
+		
+
 	}
 
 }

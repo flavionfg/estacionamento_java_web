@@ -1,4 +1,5 @@
-package br.com.estacionamento.mvc.persistent_object;
+package br.com.estacionamento.mvc.model.persistent_object;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import br.com.estacionamento.mvc.persistent_object.enums.EnumStatus;
+import br.com.estacionamento.mvc.model.persistent_object.enums.EnumStatus;
 
 //SPLIT NA MESMA CLASSE 
 //CRTL SHIFT -
@@ -18,7 +19,6 @@ import br.com.estacionamento.mvc.persistent_object.enums.EnumStatus;
 
 @Entity
 @Table(name="TB_ESTADO")
-
 public class POEstado {
 	
 //	+------------------+-------------------------+------+-----+---------+----------------+
@@ -42,10 +42,10 @@ public class POEstado {
 	@Column(name = "TB_ESTADO_SIGLA", nullable = false, length = 2)
 	private String siglaEstado;
 	
-//	@Enumerated(value = EnumType.STRING)
-//	@Column(name = "TB_ESTADO_STATUS", nullable = false)
-//	private EnumStatus statusEstado;
-//	
+	@Enumerated(value = EnumType.STRING)
+	@Column(name = "TB_ESTADO_STATUS", nullable = false)
+	private EnumStatus statusEstado;
+	
 	public int getIdEstado() {
 		return idEstado;
 	}
@@ -64,12 +64,12 @@ public class POEstado {
 	public void setSiglaEstado(String siglaEstado) {
 		this.siglaEstado = siglaEstado;
 	}
-//	public EnumStatus getStatusEstado() {
-//		return statusEstado;
-//	}
-//	public void setStatusEstado(EnumStatus statusEstado) {
-//		this.statusEstado = statusEstado;
-//	}
+	public EnumStatus getStatusEstado() {
+		return statusEstado;
+	}
+	public void setStatusEstado(EnumStatus statusEstado) {
+		this.statusEstado = statusEstado;
+	}
 	
 
 }
