@@ -53,6 +53,13 @@ public class Estado extends HttpServlet {
 		CRUDEstado e = new CRUDEstado();
 		e.insert(estado);
 		System.out.println("Salvo com Sucesso!");
+		
+		
+		if (estado.getIdEstado() > 0) {
+			response.sendRedirect(request.getContextPath() + "/sucesso.jsp");
+		}else {
+			response.sendRedirect(request.getContextPath() + "/erro.jps");
+		}
 
 		out.println("<html>");
 		out.println("<body>");

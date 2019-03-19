@@ -29,6 +29,6 @@ public abstract class AbstractCRUD {
 	public abstract void insert(Object o);
 	public abstract void update(Object o);
 	public abstract void delete(Object o);
-	public abstract ArrayList<Object> select(String statament);
+	public abstract ArrayList<?> select(String statament);
 	
 }

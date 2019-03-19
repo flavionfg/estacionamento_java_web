@@ -9,6 +9,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import br.com.estacionamento.mvc.model.persistent_object.enums.EnumStatus;
 
 //SPLIT NA MESMA CLASSE 
@@ -69,6 +72,17 @@ public class POEstado {
 	}
 	public void setStatusEstado(EnumStatus statusEstado) {
 		this.statusEstado = statusEstado;
+	}
+	
+	public JSONObject toJSON() throws JSONException{
+		
+		JSONObject json = new JSONObject();
+		json.put("idEstado", this.idEstado);
+		json.put("nomeEstado", this.nomeEstado);
+		json.put("siglaEstado", this.siglaEstado);
+		json.put("statusEstado", this.statusEstado.getStatus());
+		
+		return json;
 	}
 	
 

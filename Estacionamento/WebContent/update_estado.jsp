@@ -4,23 +4,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Cadastrar Estado</title>
+<title>Atualizar Estado</title>
 
-		
 		<script src = js/jquery.js></script>
 		<script src = js/index.js></script>
+
 </head>
 <body>
 
 		<form>
 		
-			<input type = "text" placeholder = "Nome" name = "estado_nome" id = "tf_estado" />
-			<input type = "text" placeholder = "Sigla" name = "estado_sigla" id = "tf_sigla"/>
-			<input type = "text" placeholder = "Status" name = "estado_status" id = "slc_status"/>
-		
-			<input type = "button" value="Salvar" id="btn-salvar" />
+			<div id = "set"> </div>
+			
 			
 		</form>
+
 
 </body>
 </html>

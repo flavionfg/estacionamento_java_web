@@ -35,11 +35,9 @@ public class CRUDEstado extends AbstractCRUD{
 		super.em.remove(po);
 		super.em.getTransaction().commit();
 		super.close();
-		
-		
 	}
 	
-	public ArrayList<Object> select (String statement){
+	public ArrayList<POEstado> select (String statement){
 		
 		if (statement == null || statement.equals("")) {
 			statement = "SELECT o FROM POEstado o";
@@ -47,7 +45,7 @@ public class CRUDEstado extends AbstractCRUD{
 		
 		super.open();
 		Query query = super.em.createQuery(statement);
-		ArrayList<Object> set = (ArrayList<Object>) query.getResultList();
+		ArrayList<POEstado> set = (ArrayList<POEstado>) query.getResultList();
 		super.close();
 		return set;
 	}
