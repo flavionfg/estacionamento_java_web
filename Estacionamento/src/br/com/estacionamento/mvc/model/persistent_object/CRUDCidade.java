@@ -39,7 +39,7 @@ public class CRUDCidade extends AbstractCRUD{
 		
 	}
 	
-	public ArrayList<Object> select (String statement){
+	public ArrayList<POCidade> select (String statement){
 		
 		if (statement == null || statement.equals("")) {
 			statement = "SELECT o FROM POCidade o";
@@ -47,7 +47,7 @@ public class CRUDCidade extends AbstractCRUD{
 		
 		super.open();
 		Query query = super.em.createQuery(statement);
-		ArrayList<Object> set = (ArrayList<Object>) query.getResultList();
+		ArrayList<POCidade> set = (ArrayList<POCidade>) query.getResultList();
 		super.close();
 		return set;
 	}

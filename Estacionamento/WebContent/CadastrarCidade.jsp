@@ -16,7 +16,7 @@
     
     	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		
-		<script src = js/cidade.js></script>
+		<script src = js/SalvarCidade.js></script>
 </head>
 <body>
 	<div class="row div">
@@ -25,10 +25,9 @@
 			<input type = "text" placeholder = "Status" name = "cidade_status" id = "slc_status"/>
 			
 			<select id="selecionar_estado">
-				<option disabled selected>Estado</option>
+				<option disabled selected>Selecione um Estado</option>
 			</select>
-			
-			
+
 			<input class="button" type = "button" value="Salvar" id="btn-salvar" />
 		</form>
 	</div>

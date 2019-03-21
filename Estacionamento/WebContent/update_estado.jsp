@@ -16,7 +16,8 @@
     
     	<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<script src = js/jquery.js></script>
-		<script src = js/index.js></script>
+		<script src = js/AlterarEstado.js></script>
+		
 
 </head>
 <body>

@@ -7,14 +7,12 @@
 <title>Insert title here</title>
 
 		<script src = js/jquery.js></script>
-		<script src = js/index.js></script>
+		<script src = js/ListarEstado.js></script>
 
 </head>
 <body>
 
 	<div id = "set"> </div>
 	
-
-
 </body>
 </html>

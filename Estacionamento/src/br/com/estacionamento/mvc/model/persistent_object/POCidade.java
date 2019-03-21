@@ -11,6 +11,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import br.com.estacionamento.mvc.model.persistent_object.enums.EnumStatus;
 
 
@@ -70,6 +73,16 @@ public class POCidade {
 		this.estadoCidade = estadoCidade;
 	}
 	
+	public JSONObject toJSON() throws JSONException {
+		
+		JSONObject json = new JSONObject();
+		json.put("idCidade", this.idCidade);
+		json.put("nomeCidade", this.nomeCidade);
+		json.put("idEstado", this.estadoCidade.getIdEstado());
+		json.put("nomeEstado", this.estadoCidade.getNomeEstado());
+		json.put("cidade_status", this.statusCidade.getStatus());
+		
+		return json;
+	}
 
-	
 }
